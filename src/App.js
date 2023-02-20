@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+// import {Home} from "./Home"
 import './App.css';
+import {useState} from "react"
 
 function App() {
+  const [comp,setComp]=useState("Before Load");
+  // useEffect(function(){
+  //   setTimeout(function(){
+      // const loadHomeComp=async function(){
+      //   const resp = await import("./Home");
+      //   setComp(resp.Home)
+      // };
+  //     loadHomeComp();
+  //   },2000);
+
+  // },[]);
+  const onBtnClick=async function(){
+    const resp=await import("./Home");
+    setComp(resp.Home)
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"><button onClick={onBtnClick}>Go to Home</button>
+    <div>{comp}</div>{comp}
     </div>
   );
 }
