@@ -31,7 +31,7 @@ function App() {
   };
   return (
     <div className="App"><button onClick={onBtnClick}>Go to Home</button>
-    <div>{comp}</div>{comp}
+    <div>{comp}</div>
     </div>
   );
 }
