@@ -27,8 +27,8 @@ function App() {
       <React.Suspense>
         <HomePage/>
       </React.Suspense>
-    )
-  }
+    );
+  };
   return (
     <div className="App"><button onClick={onBtnClick}>Go to Home</button>
     <div>{comp}</div>{comp}
